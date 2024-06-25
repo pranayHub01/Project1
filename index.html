@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Listing Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Shoppig Products</h1>
+      <input type="text" id="search" placeholder="Search products..." />
+    </header>
+
+    <main>
+      <div class="filters">
+        <!-- Product filtering choices  category  and price wise-->
+        <select
+          id="category-filter"
+          title="category-filter"
+          class="category-dropd"
+        >
+          <option value="">All Categories</option>
+        </select>
+        <select id="price-sort" title="price-sort" class="price-dropd">
+          <option value="">Sort by Price</option>
+          <option value="asc">Low to High</option>
+          <option value="desc">High to Low</option>
+        </select>
+      </div>
+
+      <div id="product-grid" class="product-grid">
+        <!-- Product tabs with respective details are populated here  -->
+      </div>
+
+      <button class="load-more-records" id="load-more" style="display: none">
+        Load More
+      </button>
+    </main>
+
+    <div id="loading" class="loading">Loading...</div>
+    <div id="error" class="error" style="display: none">
+      Error fetching productsArray. Please try again later.
+    </div>
+    <!-- javascript file  -->
+    <footer>
+      <div class="footer-links">
+        <a href="#">Account</a>
+        <a href="#">About Us</a>
+        <a href="#">Help</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="footer-terms">
+        <a href="#">Terms and Conditions</a>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
